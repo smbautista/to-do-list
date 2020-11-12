@@ -1,0 +1,10 @@
+POST http://localhost:3000/add 
+
+payload:
+{
+    "name": "sarah",
+    "age": 21
+}
+####
+
+GET http://localhost:3000/all
