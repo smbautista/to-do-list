@@ -1,10 +1,12 @@
-POST http://localhost:3000/add 
 
-payload:
+###
+POST http://localhost:3000/tasks/add
+Content-Type: application/json
+
 {
-    "name": "sarah",
-    "age": 21
+    "task": "Washing dishes",
+    "schedule": "2020-11-16"
 }
-####
 
-GET http://localhost:3000/all
+###
+GET http://localhost:3000/tasks

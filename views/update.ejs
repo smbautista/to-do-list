@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Bootstrap jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <title><%=title%></title>
+</head>
+<style>
+    .container{
+        width:30%;
+    }
+</style>
+
+<body>
+    <div class="container mt-5 p-2">
+        <!-- form to ask new update -->
+        <form action="/tasks/update" method="post" autocomplete="off" class="row">
+            <h3>Update task</h3>
+            <!-- calls id from index -->
+            <input type="hidden" name="id" value="<%= data._id %>">
+            <input name="task" id="name" type="text" required value="<%=data.task%>" class="form-control mb-4 ">
+            <input name="s" id="name" type="date" required  class="form-control">
+            <!-- button to update task -->
+            <button type="submit" id="add" class="btn btn-primary mt-3">Update</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
